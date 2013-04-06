@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Auto Loan Calculator</title>
+
+  <style>
+	label { width: 100px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/json2/20121008/json2.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+
+  <script type="text/template" id="loan-tpl">
+	<label>months:</label><input id="term" type="text" value="<%= term %>"><br/>
+	<label>rate:</label><input id="rate" type="text" value="<%= rate %>"><br/>
+	<label>amount:</label><input id="amount" type="text" value="<%= amount %>"><br/>
+	<label>payment:</label><span data-bind="text payment"><%= payment %></span>	
+  </script>
+
+
+	<div id="loan-form"></div>
+
+  <script src="calc.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
