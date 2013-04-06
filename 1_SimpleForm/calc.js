@@ -30,8 +30,7 @@
 			//a very simple model for interest
 			var percent_rate = 1 + (rate * .01);
 			var monthly_payment = amount * percent_rate / term;
-			console.log(this.roundMoney(monthly_payment));
-			
+
 			//Formatting
 			var output = new Number(monthly_payment);
 			output = output.toFixed(2);
