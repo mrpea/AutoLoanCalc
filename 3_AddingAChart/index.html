@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Auto Loan Calculator - Adding a Chart</title>
+
+  <style>
+	label { width: 100px; display: inline-block; }
+	input {width: 50px; }
+	
+	.slider { display: inline-block; width: 150px !important; margin-right: 10px; height: .6em !important;}
+	
+	.ui-slider .ui-slider-handle { height: 1em !important; width: .6em !important;  outline: none;}
+		
+		
+  </style>
+<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/jquery-ui.css">
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/json2/20121008/json2.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+  <script src="http://ajax.cdnjs.com/ajax/libs/d3/3.0.8/d3.min.js"></script>
+
+  <script type="text/template" id="loan-tpl">
+	<label>months:</label><div id="term_slider" class="slider"></div><input id="term" type="text" value="<%= term %>"><br/>
+	<label>rate:</label><div id="rate_slider" class="slider"></div><input id="rate" type="text" value="<%= rate %>"><br/>
+	<label>amount:</label><div id="amount_slider" class="slider"></div><input id="amount" type="text" value="<%= amount %>"><br/>
+	<label>payment:</label><span data-bind="text payment" id="payment"><%= payment %></span>	
+
+  </script>
+
+
+	<div id="loan-form"></div>
+	<div id="chart-ui"></div>
+	
+
+  <script src="calc.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
